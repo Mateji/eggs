@@ -3,14 +3,18 @@ var CLIENT_EVENTS = require('@slack/client').CLIENT_EVENTS;
 var RTM_EVENTS = require('@slack/client').RTM_EVENTS;
 var core = require('../core/core');
 var Rx = require('rxjs');
-var token = require('../settings.json').token;
+
+try {
+    var token = require('../settings.json').token;
+} 
+catch(err) {
+    console.error("ERROR: Could not find settings.json!");
+    process.exit(1);
+}
 
 var slack = {};
-
 var rtm = new RtmClient(token);
 var group;
-
-
 
 rtm.start();
 
