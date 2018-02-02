@@ -9,6 +9,8 @@
   "author": "Maté 'Mateji' Intemann",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2"
+    "@slack/client": "^3.15.0",
+    "express": "^4.16.2",
+    "rxjs": "^5.5.6"
   }
 }
