@@ -3,7 +3,7 @@ var CLIENT_EVENTS = require('@slack/client').CLIENT_EVENTS;
 var RTM_EVENTS = require('@slack/client').RTM_EVENTS;
 var core = require('../core/core');
 var Rx = require('rxjs');
-var token = require('../.settings.json').token;
+var token = require('../settings.json').token;
 
 var slack = {};
 
